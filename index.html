@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryMap Interactivo | Plantilla uMap</title>
+  <link rel="icon" type="image/png" href="https://umap.openstreetmap.fr/static/img/favicon.png">
+  <style>
+    /* ----------- ESTILOS BASE ----------- */
+    :root {
+      --bg-color: #f8f8f8;
+      --text-color: #222;
+      --accent-color: #0066cc;
+      --chapter-bg: #ffffffcc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(135deg, var(--accent-color), #0099ff);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* ----------- CAPÍTULOS ----------- */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .chapter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: var(--chapter-bg);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .chapter:hover {
+      transform: scale(1.01);
+    }
+
+    .chapter img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 1rem 0;
+    }
+
+    .chapter h2 {
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    .chapter p {
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 480px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #ddd;
+      background-color: #fafafa;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    /* ----------- RESPONSIVE ----------- */
+    @media (max-width: 700px) {
+      header h1 { font-size: 1.8rem; }
+      .chapter { margin: 2rem 1rem; padding: 1.5rem; }
+      .map-frame { height: 360px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>El Arco de la Deforestación en la Amazonía Legal de Brasil</h1>
+    <p>Una narrativa visual con mapas interactivos creados en uMap. Desplázate para descubrir cada capítulo.</p>
+  </header>
+
+  <main>
+
+    <!-- 🔹 CAPÍTULO 1 -->
+    <section class="chapter">
+      <h2>Capítulo 1 — Introducción</h2>
+      <img src="assets/imagen1.jpg" alt="Imagen descriptiva del capítulo 1">
+      <p>La Amazonía es ampliamente conocida como el "pulmón del mundo". Es capaz de absorber el dióxido de carbono (CO2) y transformarlo en el oxígeno que necesitamos para vivir cada día. Pero, en muchas ciudades brasileñas, la jungla está gravemente amenazada. Entende más en los próximos capítulos.</p>
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <!-- 🔹 CAPÍTULO 2 -->
+    <section class="chapter">
+      <h2>Capítulo 2 — La Amazonía Legal</h2>
+      <img src="assets/imagen2.jpg" alt="Imagen descriptiva del capítulo 2">
+      <p> La Amazonía Legal comprende los límites de la jungla amazónica, en ámbitos jurídicos y políticos, en el territorio brasileño. Esto significa que están comprendidos 9 estados: Acre, Amazonas, Amapá, Maranhão, Mato Grosso, Tocantins, Rondonia y Roraima. Tiene 5 millones de km2 y su área territorial es mayor que la de todos los países miembros de la UE. Pero, como vigilar este área 24 horas por día?</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#5/-7.340675/-66.555176"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#5/-7.340675/-66.555176"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <!-- 🔹 CAPÍTULO 3 -->
+    <section class="chapter">
+      <h2>Capítulo 3 — La deforestación en 2025</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p>Según el sistema satelital PRODES, del Instituto Nacional de Pesquisas Espaciais (INPE), entre agosto del 2024 y julio del 2025, fueron deforestados 5.796km2 de la jungla, o 811.764 campos de fútbol profesional. Este mapa de calor apunta a las regiones dónde están concentradas los mayores niveles de áreas deforestadas en el ámbito de la Amazonía Legal: en el sur y centro de Pará, sur de Amazonas y norte de Mato Grosso, donde hay grandes actividades de mineración, agropecuaria y ganadería.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <!-- 🔹 CAPÍTULO 4 -->
+    <section class="chapter">
+      <h2>Capítulo 4 — El Arco de Deforestación</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p> Algunas ciudades se destacan por la intensidad con la que registran deforestaciones todos los años. Es el 'Arco de Deforestación', una región que preocupa a las autoridades brasileñas en los últimos años.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+<!-- 🔹 CAPÍTULO 5 -->
+    <section class="chapter">
+      <h2>Capítulo 5 — Altamira</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p> Algunas ciudades se destacan por la intensidad con la que registran deforestaciones todos los años. Es el 'Arco de Deforestación', una región que preocupa a las autoridades brasileñas en los últimos años.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+<!-- 🔹 CAPÍTULO 6 -->
+    <section class="chapter">
+      <h2>Capítulo 6 — São Félix do Xingu</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p> Algunas ciudades se destacan por la intensidad con la que registran deforestaciones todos los años. Es el 'Arco de Deforestación', una región que preocupa a las autoridades brasileñas en los últimos años.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+<!-- 🔹 CAPÍTULO 7 -->
+    <section class="chapter">
+      <h2>Capítulo 7 — Apuí</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p> Algunas ciudades se destacan por la intensidad con la que registran deforestaciones todos los años. Es el 'Arco de Deforestación', una región que preocupa a las autoridades brasileñas en los últimos años.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+<!-- 🔹 CAPÍTULO 8 -->
+    <section class="chapter">
+      <h2>Capítulo 8 — Colniza</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p> Algunas ciudades se destacan por la intensidad con la que registran deforestaciones todos los años. Es el 'Arco de Deforestación', una región que preocupa a las autoridades brasileñas en los últimos años.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+<!-- 🔹 CAPÍTULO 9 -->
+    <section class="chapter">
+      <h2>Capítulo 9 — Colniza</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p> Algunas ciudades se destacan por la intensidad con la que registran deforestaciones todos los años. Es el 'Arco de Deforestación', una región que preocupa a las autoridades brasileñas en los últimos años.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+<!-- 🔹 CAPÍTULO 10 -->
+    <section class="chapter">
+      <h2>Capítulo 10 — Marcelândia</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p> Algunas ciudades se destacan por la intensidad con la que registran deforestaciones todos los años. Es el 'Arco de Deforestación', una región que preocupa a las autoridades brasileñas en los últimos años.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+<!-- 🔹 CAPÍTULO 11 -->
+    <section class="chapter">
+      <h2>Capítulo 11 — Conclusiones</h2>
+      <img src="assets/imagen3.jpg" alt="Imagen descriptiva del capítulo 3">
+      <p> Cuidar de la Amazonía es una tarea de los países amazónicos, incluso Brasil, pero merece la atención de todo el mundo. Es imprescindible interromper la deforestación de manera rápida, para que la vida en la Tierra pueda seguir una realidad.</p>
+
+      <iframe class="map-frame"
+        src="<iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/el-arco-de-la-deforestacion-en-la-amazonia-legal-d_1373952?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#6/-5.889261/-59.271240"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Creado con <a href="https://umap.openstreetmap.fr/es/" target="_blank">uMap</a> y HTML5 · Plantilla adaptable por <strong>María Ariza</strong> · © 2025</p>
+  </footer>
+
+</body>
+</html>
